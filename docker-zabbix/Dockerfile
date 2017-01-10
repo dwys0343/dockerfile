@@ -2,7 +2,7 @@
 # Version 2.3
 
 FROM 10.161.160.23:5000/centos:6.8
-MAINTAINER weifeng@yhd.com	
+MAINTAINER dwys0343@sina.com	
 ENV REFRESHED_AT 2015-06-19
 
 # Install EPEL to have MySQL packages.

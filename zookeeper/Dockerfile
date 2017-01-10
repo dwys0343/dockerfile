@@ -1,6 +1,6 @@
 #  Zookeeper
 FROM 10.161.160.23:5000/cnetos-jdk:6.8
-MAINTAINER Wei Feng <weifeng@yhd.com>
+MAINTAINER dwys0343 <dwys0343@sina.com>
 
 ENV ZK_VERSION 3.4.6
 ENV ZK_DATA /var/opt/zookeeper/data

@@ -1,7 +1,7 @@
 FROM 10.161.160.23:5000/centos-jdk:6.8
 
 # Maintener
-MAINTAINER Wei Feng <weifeng@yhd.com>
+MAINTAINER dwys0343 <dwys0343@sina.com>
 
 RUN yum -y update && \
         yum -y install wget && \

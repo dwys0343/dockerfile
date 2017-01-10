@@ -4,7 +4,7 @@
 
 # use the centos base image provided by dotCloud
 FROM 10.161.160.23:5000/centos:6.8
-MAINTAINER weifeng@yhd.com
+MAINTAINER dwys0343@sina.com
 
 ENV JAVA_VERSION 7u75
 ENV BUILD_VERSION b13

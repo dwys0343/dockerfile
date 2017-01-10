@@ -1,5 +1,5 @@
 FROM 10.161.160.23:5000/centos:6.8
-MAINTAINER Wei Feng "weifeng@yhd.com"
+MAINTAINER dwys0343 "dwys0343@sina.com"
  
 RUN yum install -y mysql-server mysql
  
