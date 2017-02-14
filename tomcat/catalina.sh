@@ -103,8 +103,8 @@
 #                   signals. Default is "false" unless running on HP-UX in which
 #                   case the default is "true"
 # -----------------------------------------------------------------------------
-JAVA_OPTS='-server -Xms1024m -Xmx2048m -XX:NewSize=256m -XX:MaxPermSize=768m  -Ddisconf.env=local'
-
+JAVA_OPTS='-server -Xms1024m -Xmx2048m -XX:NewSize=256m -XX:MaxPermSize=768m -Dfile.encoding=utf8 -Ddisconf.env=local'
+CATALINA_OPTS='-Djava.rmi.server.hostname=10.161.160.23 -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=12345 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false'
 
 # OS specific support.  $var _must_ be set to either true or false.
 cygwin=false
@@ -421,7 +421,8 @@ elif [ "$1" = "start" ] ; then
       -Djava.io.tmpdir="\"$CATALINA_TMPDIR\"" \
       org.apache.catalina.startup.Bootstrap "$@" start \
       >> "$CATALINA_OUT" 2>&1 "&"
-
+#       org.apache.catalina.startup.Bootstrap "$@" start  2>&1 \
+#	| cronolog "$CATALINA_BASE"/logs/catalina.%Y-%m-%d.out >> /dev/null &
   fi
 
   if [ ! -z "$CATALINA_PID" ]; then

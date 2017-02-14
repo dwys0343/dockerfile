@@ -23,6 +23,8 @@ RUN chmod +x /opt/tomcat/bin/*sh
 
 RUN mkdir -p /opt/scmcloud-config
 
+RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
 WORKDIR /opt/tomcat
 
 VOLUME /opt/tomcat/webapps
